@@ -7,7 +7,6 @@ using Sitecore.Shell.Framework.Commands;
 using robhabraken.SitecoreTools.PowerPublish;
 using Sitecore;
 
-
 namespace robhabraken.SitecoreTools.PowerPublish.Commands
 {
     public class UnpublishItem : Command

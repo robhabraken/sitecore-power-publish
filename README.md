@@ -1,14 +1,22 @@
-sitecore-power-publish
+Sitecore Power Publish
 ======================
 
 Sitecore Publish functionality improvements and extensions by Rob Habraken
 
-First version of project, still in progress. Will add instructions and code comments!
+This is one of the first versions of this project, it's still in progress. Will add instructions and code comments!
 Next version will also include more publish related content editor add-ons...
 
+### Power Publish ###
 
-License info
-============
+First of all, this publish button will force the item being published, regardless the state of the Publishable option in the Publish restrictions, so you can use it to publish items that you've unpublished via the Unpublish button of this add-on. But more importantly, this publish button also publishes all resources used by the current item. So if you've included media items like an image or a PDF, but forgot to publish them, clicking this button will also publish those items. It even works if you've publised the media item itself, but forgot to publish its parent folder...
+
+This function will not publish linked pages in your site that are not published, but only resources like media library items and data sources used in item fields, but also the templates and layouts used by the current item.
+
+### Unpublish ###
+
+This button enables you to unpublish an item with a single click. It will change the Publish Restrictions as it unchecks the Publishable option in the Item tab and it publishes the item after that, using a Republish without Subitems.
+
+## License info ##
 
 Copyright (C) 2013 Rob Habraken
 
