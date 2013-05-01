@@ -20,6 +20,28 @@ namespace robhabraken.SitecoreTools.PowerPublish
             PublishManager.PublishItem(item, targets.ToArray(), item.Languages, deep, compareRevisions);
         }
 
+        public void PublishReversedRecursive(Item item)
+        {
+            if (!PresentInAllPublishingTargets(item))
+            {
+                this.PublishReversedRecursive(item.Parent);
+                this.PublishAll(item, false, false);
+            }
+        }
+
+        public bool PresentInAllPublishingTargets(Item item)
+        {
+            bool published = true;
+
+            var publishingTargets = this.GetPublishingTargets(item);
+            foreach (var database in publishingTargets)
+            {
+                published &= database.SelectSingleItem(item.ID.ToString()) != null;
+            }
+
+            return published;
+        }
+
         public List<Database> GetPublishingTargets(Item item)
         {
             var publishingTargets = new List<Database>();

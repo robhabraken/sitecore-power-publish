@@ -37,12 +37,12 @@ namespace robhabraken.SitecoreTools.PowerPublish.Commands
                         var referencedItem = itemLink.GetTargetItem();
                         if (referencedItem != null)
                         {
-                            publishingHelper.PublishAll(referencedItem, false, false);
+                            publishingHelper.PublishReversedRecursive(referencedItem);
                         }
                     }
                 }
 
-                // still incorporate parent items of resources!!!!
+                // yet to test publishing parents of resources
 
                 new PublishingHelper().PublishAll(item, false, false);
 
