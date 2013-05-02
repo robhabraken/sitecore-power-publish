@@ -3,7 +3,7 @@ Sitecore Power Publish
 
 Sitecore Publish functionality improvements and extensions by Rob Habraken
 
-This is one of the first versions of this project, it's still in progress. Will add instructions and code comments!
+This is one of the first versions of this project, it's still in progress.
 Next version will also include more publish related content editor add-ons...
 
 ### Power Publish ###
