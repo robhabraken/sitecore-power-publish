@@ -8,13 +8,13 @@ Next version will also include more publish related content editor add-ons...
 
 ### Power Publish ###
 
-First of all, this publish button will force the item being published, regardless the state of the Publishable option in the Publish restrictions, so you can use it to publish items that you've unpublished via the Unpublish button of this add-on. But more importantly, this publish button also publishes all resources used by the current item. So if you've included media items like an image or a PDF, but forgot to publish them, clicking this button will also publish those items. It even works if you've publised the media item itself, but forgot to publish its parent folder...
+First of all, this publish button will force the item being published, regardless the state of the Publishable option on the Item tab in the Publish restrictions, so you can use it to publish items that you've unpublished via the Unpublish button of this add-on (it does respect other Publishing restrictions though). But more importantly, this publish button also publishes all resources used by the current item. So if you've included media items like an image or a PDF, but forgot to publish them, clicking this button will also publish those items. It even works if you've publised the media item itself, but forgot to publish its parent folder...
 
-This function will not publish linked pages in your site that are not published, but only resources like media library items and data sources used in item fields, but also the templates and layouts used by the current item.
+This function will not publish linked pages in your site that are not published, but only resources like media library items and data sources used in item fields, as those are needed to display the item you want to publish correctly. This method even publishes the templates and layouts used by the current item, if that's not done yet.
 
 ### Unpublish ###
 
-This button enables you to unpublish an item with a single click. It will change the Publish Restrictions as it unchecks the Publishable option in the Item tab and it publishes the item after that, using a Republish without Subitems.
+This button enables you to unpublish an item with a single click. It will change the Publish Restrictions as it unchecks the Publishable option on the Item tab and publishes the item after that, using a full Republish without Subitems.
 
 ## License info ##
 
