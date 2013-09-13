@@ -21,7 +21,7 @@ This button enables you to unpublish an item with a single click. It will change
 ## Release notes ##
 
 * 0.3 - Initial release
-* 0.4 - Added Power Publish and Unpublish buttons to the Page Editor too
+* 0.4 - Added Power Publish and Unpublish button to the Page Editor
 
 ## License info ##
 
