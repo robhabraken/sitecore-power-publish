@@ -12,6 +12,8 @@ First of all, this publish button will force the item being published, regardles
 
 This function will not publish linked pages in your site that are not published, but only resources like media library items and data sources used in item fields, as those are needed to display the item you want to publish correctly. This method even publishes the templates and layouts used by the current item, if that's not done yet.
 
+If you are using Sitecore 7, this also works for datasource field values, as they are queryable or represented by GUIDs from version 7.0 and up. Older versions of Sitecore (6.6 and less) store datasources as plain text, hence they are not noted as a reference by Sitecore and thus this plugin will not have any effect on those items.
+
 ### Unpublish ###
 
 This button enables you to unpublish an item with a single click. It will change the Publish Restrictions as it unchecks the Publishable option on the Item tab and publishes the item after that, using a full Republish without Subitems.
