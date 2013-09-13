@@ -18,6 +18,11 @@ If you are using Sitecore 7, this also works for datasource field values, as the
 
 This button enables you to unpublish an item with a single click. It will change the Publish Restrictions as it unchecks the Publishable option on the Item tab and publishes the item after that, using a full Republish without Subitems.
 
+## Release notes ##
+
+0.3 Initial release
+0.4 Added Power Publish and Unpublish buttons to the Page Editor too
+
 ## License info ##
 
 Copyright (C) 2013 Rob Habraken
