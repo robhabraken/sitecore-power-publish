@@ -1,14 +1,9 @@
-﻿using System.Collections.Generic;
-using Sitecore.Configuration;
-using Sitecore.Data;
-using Sitecore.Data.Items;
-using Sitecore.Publishing;
-using Sitecore.Shell.Framework.Commands;
-using robhabraken.SitecoreTools.PowerPublish;
-using Sitecore;
-
+﻿
 namespace robhabraken.SitecoreTools.PowerPublish.Commands
 {
+    using robhabraken.SitecoreTools.PowerPublish;
+    using Sitecore.Shell.Framework.Commands;
+
     /// <summary>
     /// This button enables you to unpublish an item with a single click. It will change the Publish Restrictions
     /// as it unchecks the Publishable option on the Item tab and publishes the item after that, using a full Republish without Subitems.

@@ -1,15 +1,9 @@
-﻿using System.Collections.Generic;
-using Sitecore.Configuration;
-using Sitecore.Data;
-using Sitecore.Data.Items;
-using Sitecore.Publishing;
-using Sitecore.Shell.Framework.Commands;
-using robhabraken.SitecoreTools.PowerPublish;
-using Sitecore;
-using Sitecore.Data.Fields;
-
+﻿
 namespace robhabraken.SitecoreTools.PowerPublish.Commands
 {
+    using robhabraken.SitecoreTools.PowerPublish;
+    using Sitecore;
+    using Sitecore.Shell.Framework.Commands;
 
     /// <summary>
     /// First of all, this publish button will force the item being published, regardless the state of the Publishable option on the Item tab in the Publish restrictions,

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Sitecore.Configuration;
-using Sitecore.Data;
-using Sitecore.Data.Items;
-using Sitecore.Publishing;
-using Sitecore.Shell.Framework.Commands;
-
+﻿
 namespace robhabraken.SitecoreTools.PowerPublish
 {
+    using System.Collections.Generic;
+    using Sitecore.Configuration;
+    using Sitecore.Data;
+    using Sitecore.Data.Items;
+    using Sitecore.Publishing;
 
     /// <summary>
     /// Helper methods for easy publishing from code, that are not natively available in the Sitecore API.

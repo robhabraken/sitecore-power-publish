@@ -1,16 +1,8 @@
-﻿using System.Collections.Generic;
-using Sitecore.Configuration;
-using Sitecore.Data;
-using Sitecore.Data.Items;
-using Sitecore.Publishing;
-using Sitecore.Shell.Framework.Commands;
-using robhabraken.SitecoreTools.PowerPublish;
-using Sitecore;
-using Sitecore.Web.UI.Sheer;
-using Sitecore.Web.UI.HtmlControls;
-
+﻿
 namespace robhabraken.SitecoreTools.PowerPublish.Commands
 {
+    using Sitecore.Data.Items;
+    using Sitecore.Shell.Framework.Commands;
 
     /// <summary>
     /// This command shows if the current item is published to one or more targets.
