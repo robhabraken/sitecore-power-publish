@@ -66,6 +66,27 @@ namespace robhabraken.SitecoreTools.PowerPublish
         }
 
         /// <summary>
+        /// Returns a list of publishing targets that the given item is actually published to.
+        /// </summary>
+        /// <param name="item">The item to look for in the publishing targets</param>
+        /// <returns>A list of all publishing targets where the given item is found</returns>
+        public List<string> ListPublishedTargets(Item item)
+        {
+            var publishedTargets = new List<string>();
+
+            var publishingTargets = this.GetPublishingTargets(item);
+            foreach (var database in publishingTargets)
+            {
+                if (database.SelectSingleItem(item.ID.ToString()) != null)
+                {
+                    publishedTargets.Add(database.Name);
+                }
+            }
+
+            return publishedTargets;
+        }
+
+        /// <summary>
         /// Returns all publishing targets as a List of Database objects.
         /// This is actually the list to publish all items to, as it is incorrect to assume there is only one publishing target, called 'web'.
         /// </summary>
