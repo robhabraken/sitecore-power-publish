@@ -1,7 +1,7 @@
 Sitecore Power Publish
 ======================
 
-Sitecore Publish functionality improvements and extensions by Rob Habraken
+Sitecore Publish functionality improvements and extensions for Sitecore 6.6 and up by Rob Habraken
 
 ### Power Publish ###
 
