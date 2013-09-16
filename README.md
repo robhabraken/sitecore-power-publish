@@ -25,6 +25,7 @@ This gallery button shows the publishing state for all publishing targets. If a 
 * 0.4 - Added Power Publish and Unpublish button to the Page Editor
 * 0.5 - Fixed bug that already published references aren't published again and added Publishing State gallery button
 * 0.6 - Added backwards compatibility for versions 6.4 and up
+* 0.7 - Added multi-language support
 
 ## License info ##
 
