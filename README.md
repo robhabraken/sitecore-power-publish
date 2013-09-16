@@ -1,7 +1,7 @@
 Sitecore Power Publish
 ======================
 
-Sitecore Publish functionality improvements and extensions for Sitecore 6.6 and up by Rob Habraken
+Sitecore Publish functionality improvements and extensions for Sitecore 6.4 and up by Rob Habraken
 
 ### Power Publish ###
 
@@ -24,6 +24,7 @@ This gallery button shows the publishing state for all publishing targets. If a 
 * 0.3 - Initial release
 * 0.4 - Added Power Publish and Unpublish button to the Page Editor
 * 0.5 - Fixed bug that already published references aren't published again and added Publishing State gallery button
+* 0.6 - Added backwards compatibility for versions 6.4 and up
 
 ## License info ##
 
