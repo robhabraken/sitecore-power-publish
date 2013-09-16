@@ -33,7 +33,9 @@ namespace robhabraken.SitecoreTools.PowerPublish.Commands
                 var publishingHelper = new PublishingHelper();
 
                 Globals.LinkDatabase.UpdateReferences(item);
-                var itemReferences = Globals.LinkDatabase.GetItemReferences(item, true);
+                Globals.LinkDatabase.GetReferences(item);
+
+                var itemReferences = Globals.LinkDatabase.GetReferences(item);
                 foreach (var itemLink in itemReferences)
                 {
                     if (itemLink != null)
