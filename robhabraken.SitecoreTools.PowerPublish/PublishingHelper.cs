@@ -12,6 +12,12 @@ namespace robhabraken.SitecoreTools.PowerPublish
     /// </summary>
     public class PublishingHelper
     {
+        public enum PublishState
+        {
+            Published,
+            Changed,
+            NotPublished
+        }
 
         /// <summary>
         /// Publishes an item in all languages to all publishing targets.
@@ -66,20 +72,51 @@ namespace robhabraken.SitecoreTools.PowerPublish
         /// </summary>
         /// <param name="item">The item to look for in the publishing targets</param>
         /// <returns>A list of all publishing targets where the given item is found</returns>
-        public List<string> ListPublishedTargets(Item item)
+        public List<Database> ListPublishedTargets(Item item)
         {
-            var publishedTargets = new List<string>();
+            var publishedTargets = new List<Database>();
 
             var publishingTargets = this.GetPublishingTargets(item);
             foreach (var database in publishingTargets)
             {
                 if (database.SelectSingleItem(item.ID.ToString()) != null)
                 {
-                    publishedTargets.Add(database.Name);
+                    publishedTargets.Add(database);
                 }
             }
 
             return publishedTargets;
+        }
+
+        /// <summary>
+        /// Returns a list of all publishing targets, accompanied with the publishing state of the current item 
+        /// </summary>
+        /// <param name="item">The item to look for in the publishing targets</param>
+        /// <returns>A dictionary of all publishing targets with their publishing state</returns>
+        public Dictionary<string, PublishState> ListTargets(Item item)
+        {
+            var targets = new Dictionary<string, PublishState>();
+
+            var publishingTargets = this.GetPublishingTargets(item);
+            foreach (var database in publishingTargets)
+            {
+                var state = PublishState.NotPublished;
+                var remoteItem = database.SelectSingleItem(item.ID.ToString());
+                if (remoteItem != null)
+                {
+                    if (item.Statistics.Revision.Equals(remoteItem.Statistics.Revision))
+                    {
+                        state = PublishState.Published;
+                    }
+                    else
+                    {
+                        state = PublishState.Changed;
+                    }
+                }
+                targets.Add(database.Name, state);
+            }
+
+            return targets;
         }
 
         /// <summary>
@@ -107,7 +144,7 @@ namespace robhabraken.SitecoreTools.PowerPublish
         /// </summary>
         /// <param name="item">The item to publish, used to determine the source database</param>
         /// <returns>A list of publishing targets for the database of the given item</returns>
-        public List<Database> GetPublishingTargets(Item item)
+        private List<Database> GetPublishingTargets(Item item)
         {
             var publishingTargets = new List<Database>();
 
