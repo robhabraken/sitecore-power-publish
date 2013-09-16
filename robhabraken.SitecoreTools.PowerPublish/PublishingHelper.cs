@@ -120,25 +120,6 @@ namespace robhabraken.SitecoreTools.PowerPublish
         }
 
         /// <summary>
-        /// Returns true if the latest revision of the current item is published to all publishing targets.
-        /// </summary>
-        /// <param name="item">The item to look for in the publishing targets</param>
-        /// <returns>True if the item is up to date in all publishing targets</returns>
-        public bool AllPublishingTargetsUpToDate(Item item)
-        {
-            bool allUpToDate = true;
-
-            var publishingTargets = this.GetPublishingTargets(item);
-            foreach (var database in publishingTargets)
-            {
-                var remoteItem = database.SelectSingleItem(item.ID.ToString());
-                allUpToDate &= (remoteItem != null && item.Statistics.Revision.Equals(remoteItem.Statistics.Revision));
-            }
-
-            return allUpToDate;
-        }
-
-        /// <summary>
         /// Returns all publishing targets as a List of Database objects.
         /// This is actually the list to publish all items to, as it is incorrect to assume there is only one publishing target, called 'web'.
         /// </summary>

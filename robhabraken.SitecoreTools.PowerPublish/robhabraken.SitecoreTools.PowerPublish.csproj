@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\ShowTargets.cs" />
     <Compile Include="Commands\PowerPublishItem.cs" />
     <Compile Include="Commands\UnpublishItem.cs" />
     <Compile Include="Galleries\GalleryPublishedTargetsForm.cs" />
