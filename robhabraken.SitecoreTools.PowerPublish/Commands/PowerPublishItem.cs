@@ -41,12 +41,16 @@ namespace robhabraken.SitecoreTools.PowerPublish.Commands
                         var referencedItem = itemLink.GetTargetItem();
                         if (referencedItem != null)
                         {
-                            publishingHelper.PublishReversedRecursive(referencedItem);
+                            publishingHelper.PublishAll(referencedItem, false, false);
+                            if (referencedItem.Parent != null)
+                            {
+                                publishingHelper.PublishReversedRecursive(referencedItem.Parent);
+                            }
                         }
                     }
                 }
 
-                new PublishingHelper().PublishAll(item, false, false);
+                publishingHelper.PublishAll(item, false, false);
 
                 Sitecore.Context.ClientPage.ClientResponse.Alert("The item and its resources are being published");
             }
