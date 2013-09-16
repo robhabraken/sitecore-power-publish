@@ -101,7 +101,7 @@ namespace robhabraken.SitecoreTools.PowerPublish
             foreach (var database in publishingTargets)
             {
                 var state = PublishState.NotPublished;
-                var remoteItem = database.SelectSingleItem(item.ID.ToString());
+                var remoteItem = database.GetItem(item.ID, item.Language, item.Version);
                 if (remoteItem != null)
                 {
                     if (item.Statistics.Revision.Equals(remoteItem.Statistics.Revision))
