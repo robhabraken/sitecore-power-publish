@@ -3,9 +3,6 @@ Sitecore Power Publish
 
 Sitecore Publish functionality improvements and extensions by Rob Habraken
 
-This is one of the first versions of this project, it's still in progress.
-Next version will also include more publish related content editor add-ons...
-
 ### Power Publish ###
 
 First of all, this publish button will force the item being published, regardless the state of the Publishable option on the Item tab in the Publish restrictions, so you can use it to publish items that you've unpublished via the Unpublish button of this add-on (it does respect other Publishing restrictions though). But more importantly, this publish button also publishes all resources used by the current item. So if you've included media items like an image or a PDF, but forgot to publish them, clicking this button will also publish those items. It even works if you've publised the media item itself, but forgot to publish its parent folder...
@@ -18,10 +15,15 @@ If you are using Sitecore 7, this also works for datasource field values, as the
 
 This button enables you to unpublish an item with a single click. It will change the Publish Restrictions as it unchecks the Publishable option on the Item tab and publishes the item after that, using a full Republish without Subitems.
 
+### Publishing State ###
+
+This gallery button shows the publishing state for all publishing targets. If a publishing target is up-to-date, a green dot is shown. If the item is published to a publishing target, but the item has changed afterwards, an orange dot is shown (so it's published, but not up-to-date). If the current item is not present in a publishing target at all, a red dot is shown. This function enables the content editor to check into detail if the content is published or not, for every publishing target.
+
 ## Release notes ##
 
 * 0.3 - Initial release
 * 0.4 - Added Power Publish and Unpublish button to the Page Editor
+* 0.5 - Fixed bug that already published references aren't published again and added Publishing State gallery button
 
 ## License info ##
 
