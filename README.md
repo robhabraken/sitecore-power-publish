@@ -2,6 +2,7 @@ Sitecore Power Publish
 ======================
 
 Sitecore Publish functionality improvements and extensions by Rob Habraken
+Compatible with Sitecore 6.6 and up
 
 ### Power Publish ###
 
