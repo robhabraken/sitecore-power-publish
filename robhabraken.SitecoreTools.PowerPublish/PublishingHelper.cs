@@ -28,7 +28,10 @@ namespace robhabraken.SitecoreTools.PowerPublish
         public void PublishAll(Item item, bool deep, bool compareRevisions)
         {
             var targets = this.GetPublishingTargets(item);
-            PublishManager.PublishItem(item, targets.ToArray(), item.Languages, deep, compareRevisions);
+            if (targets.Count > 0)
+            {
+                PublishManager.PublishItem(item, targets.ToArray(), item.Languages, deep, compareRevisions);
+            }
         }
 
         /// <summary>
