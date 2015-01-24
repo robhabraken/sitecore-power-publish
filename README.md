@@ -3,6 +3,8 @@ Sitecore Power Publish
 
 Sitecore Publish functionality improvements and extensions for Sitecore 6.4 and up by Rob Habraken
 
+NOTE: Sitecore extended their LinkDatabase class in newer versions (at least 7.2 and up), so I will refactor this module ASAP. Also, Sitecore includes the option to publish referenced items itself, so I will update my module to see where it can still be of added value to Sitecore's default functionality.
+
 ### Power Publish ###
 
 First of all, this publish button will force the item being published, regardless the state of the Publishable option on the Item tab in the Publish restrictions, so you can use it to publish items that you've unpublished via the Unpublish button of this add-on (it does respect other Publishing restrictions though). But more importantly, this publish button also publishes all resources used by the current item. So if you've included media items like an image or a PDF, but forgot to publish them, clicking this button will also publish those items. It even works if you've publised the media item itself, but forgot to publish its parent folder...
