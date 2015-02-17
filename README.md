@@ -1,7 +1,7 @@
 Sitecore Power Publish
 ======================
 
-Sitecore Publish functionality improvements and extensions for Sitecore by Rob Habraken. This module works on Sitecore version 6.4 and up and is tested and proved for all versions up to Sitecore 8.0.
+Sitecore Publish functionality improvements and extensions for Sitecore by Rob Habraken. This module works on Sitecore version 6.4 and up and is tested and proved for all versions up to Sitecore XP version 8.0 Update 1.
 
 ### Power Publish ###
 
