@@ -28,6 +28,11 @@ This gallery button shows the publishing state for all publishing targets. If a 
 * 0.7 - Added multi-language support
 * 0.9 - Tested on Sitecore XP 8 and tested workflow compatibility
 
+## Feature requirements ##
+
+* (Optionally) publishing via the Smart Publish option instead of a Full Republish to speed up the publishing process.
+* Add a progress indicator to see how many items are being published and to follow its progress.
+* 
 ## License info ##
 
 Copyright (C) 2015 Rob Habraken
