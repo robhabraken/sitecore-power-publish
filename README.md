@@ -32,7 +32,7 @@ This gallery button shows the publishing state for all publishing targets. If a 
 
 * (Optionally) publishing via the Smart Publish option instead of a Full Republish to speed up the publishing process.
 * Add a progress indicator to see how many items are being published and to follow its progress.
-* 
+
 ## License info ##
 
 Copyright (C) 2015 Rob Habraken
